@@ -25,3 +25,18 @@ variables should be passed to ansible by using the flag -e
 ansible is collection of  modules / collections : Whatever the task that you want  yo perform is already predefined , all you need is just to consume them. 
 
 there are thousands of modules avaliable : -m shell. -m yum, -m service 
+
+### ansible can be approached in 2 ways :
+.....
+1) manual approach      : using ansible command  : with this you can excute one command at a time.
+2) Automated approach   : using ancible playbook : with this you can excute all the set of tasks that need to be excuted , things that will happend in the declared approach 
+.......
+
+### Automated Approach : This uses Play book
+
+......
+playbooks are written using a language called YAML
+
+YAML is just markup language ; Markup language is nothing a presentation language 
+
+......
