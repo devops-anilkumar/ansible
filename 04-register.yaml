@@ -7,7 +7,7 @@
      register: OUT
 
    - name: printing shell output using OUT variable
-     ansible.builtin.debug: uptime
+     ansible.builtin.debug:
       msg: "{{OUT}}"
 
 
