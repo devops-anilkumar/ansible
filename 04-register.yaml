@@ -8,7 +8,7 @@
 
    - name: printing shell output using OUT variable
      ansible.builtin.debug: uptime
-     msg: "{{OUT}}"
+      msg: "{{OUT}}"
 
 
 #shell module by default dont show you the output ;it just excutes and if you just want to see the output you just need to register the output
