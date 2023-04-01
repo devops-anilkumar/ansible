@@ -1,10 +1,10 @@
 - name : Demo on using variables
   hosts: all
   vars_files: demo-vars.yaml
-  # vars_prompt:
-  #      - name: PURL
-  #      prompt: Enter the PURL
-  #      private: false
+  vars_prompt:
+       - name: PURL
+         prompt: Enter the purl
+         private: false
   vars:
     URL: play.google.com                   # Global variable; ALL tasks can inherit this value 
   tasks:
@@ -25,7 +25,7 @@
          ansible.builtin.debug:
            msg: "{{GAME_LIVES}}"
 
-       - name: Printing prompt URL
+       - name: Printing prompt url
          ansible.builtin.debug:
            msg: "{{PURL}}"
 
