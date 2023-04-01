@@ -3,6 +3,9 @@
   vars:
     URL: play.google.com                   # Global variable; ALL tasks can inherit this value 
   vars_files: demo-vars.yaml
+  vars_prompt:
+       -name: url
+       prompt: Enter the PURL
   tasks:
        - name: Printing the URL task
          ansible.builtin.debug:
@@ -21,11 +24,16 @@
          ansible.builtin.debug:
            msg: "{{GAME_LIVES}}"
 
+           
+       - name: Printing prompt URL
+         ansible.builtin.debug:
+           msg: "{{PURL}}"
+
 
 
 # $URL is bash is eqivalent to {{URL}} in YAML
 
-# command line variables > Local variables > global variable 
+# command line variables > Local variables > global variable > file variables > prompt variable 
 
 #when to specially use quotes?
 # when you are printing only the variable then enclose them in double quotes .
