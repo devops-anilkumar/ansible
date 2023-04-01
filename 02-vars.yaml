@@ -1,0 +1,11 @@
+- name : Demo on using variables
+  hosts: all
+  vars:
+    URL: play.google.com
+  tasks:
+    - name: Printing the URL task
+      ansible.builtin.debug:
+        msg: the value of URL is {{URL}}
+
+
+# $URL is bash is eqivalent to {{URL}} in YAML
