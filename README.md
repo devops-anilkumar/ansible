@@ -53,3 +53,13 @@ YAML is just markup language ; Markup language is nothing a presentation languag
 ### how to run a playbook ?
 .....
 ansible-playbook -i inv -e ansible_user=userName -e  ansible_pass=password name of the playbook.yml
+
+### ansible facts :
+.....
+facts are the properties of the remote node that you ansible is going to collect : based on these facts collected ansible decides weather to perform the action or not 
+
+facts that are callected by ansible?
+Ansible uses a module called as setup using that we can check the collected facts 
+
+
+$ ansible -i inventory  all -m setup
