@@ -50,3 +50,6 @@ YAML is just markup language ; Markup language is nothing a presentation languag
 *  task  :  task is nothing but an action that we wish to perform 
 .....
 
+### how to run a playbook ?
+.....
+ansible-playbook -e ansible_user=userName -e  ansible_pass=password name of the playbook.yml
