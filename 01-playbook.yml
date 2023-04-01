@@ -1,0 +1,6 @@
+- name: Play1
+  hosts: all   # mention the name of the inventory group that you want this to be running against
+  tasks:
+   - name: print hello from play1
+     ansible.builtin.debug:
+       msg: hello from task1 of play1

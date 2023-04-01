@@ -42,3 +42,11 @@ YAML is just markup language ; Markup language is nothing a presentation languag
 ......
 
 'YAML' is indentation specific.
+
+### what is a playbook ?
+....
+* playbook : it is a list of plays.  (thats why its always start with - )
+*  play     : it is a list of tasks.
+*  task  :  task is nothing but an action that we wish to perform 
+.....
+
