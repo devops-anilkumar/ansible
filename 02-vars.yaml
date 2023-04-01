@@ -14,3 +14,8 @@
 
 
 # $URL is bash is eqivalent to {{URL}} in YAML
+
+# Local variables > global variable 
+
+#when to specially use quotes?
+# when you are printing only the variable then enclose them in double quotes .
