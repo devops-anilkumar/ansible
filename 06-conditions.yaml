@@ -22,6 +22,11 @@
       ansible.builtin.debug:
         msg: variable action is declared
       when: actions123 is defined
+
+  #older version of ansible uses undefined,latest version of ansible uses not defined
+
+  # deffined ,not defined,true, false,succeded, failure all of them are predefined keywords as per the documentation
+  #ref : https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_conditionals.html
         
       
       
