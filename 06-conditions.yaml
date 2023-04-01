@@ -1,14 +1,45 @@
-- name: Demo on conditions
-  hosts: all
-  tasks:
-    - name: excute this task when distribution is Centos
+- name: Demo on conditions 
+  hosts: all  
+  tasks: 
+    - name: Execute this task when Distribution is CentOS 
       ansible.builtin.debug:
-        msg: welcome to Centos
-      when: ansible_distribution == "Centos"
+        msg: Welcome to CentOS 
+      when: ansible_distribution == "CentOS" 
+
+    - name: Execute this task when Distribution is Ubuntu 
+      ansible.builtin.debug:
+        msg: Welcome to Ubuntu 
+      when: ansible_distribution == "Ubuntu"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# - name: Demo on conditions
+#   hosts: all
+#   tasks:
+#     - name: excute this task when distribution is Centos
+#       ansible.builtin.debug:
+#         msg: welcome to Centos
+#       when: ansible_distribution == "Centos"
         
-    - name: excute this task when distribution is ubuntu
-      ansible.builtin.debug:
-        msg: welcome to ubuntu
-      when: ansible_distribution == "ubuntu"
+#     - name: excute this task when distribution is ubuntu
+#       ansible.builtin.debug:
+#         msg: welcome to ubuntu
+#       when: ansible_distribution == "ubuntu"
         
       
