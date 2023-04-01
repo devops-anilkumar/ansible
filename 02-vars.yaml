@@ -2,8 +2,7 @@
   hosts: all
   vars:
     URL: play.google.com                   # Global variable; ALL tasks can inherit this value 
-
-vars_files: demo-vars.yaml
+  vars_files: demo-vars.yaml
   tasks:
        - name: Printing the URL task
          ansible.builtin.debug:
