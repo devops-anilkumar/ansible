@@ -1,4 +1,7 @@
-- name: printing a text message
-  ansible.builtin.debug:
-    msg: i am a message printed from frontend
+- name: Install nginx
+  ansible.builtin.package:
+    become: yes
+    name: nginx
+    state: present
+
   
