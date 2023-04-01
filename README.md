@@ -62,4 +62,4 @@ facts that are callected by ansible?
 Ansible uses a module called as setup using that we can check the collected facts 
 
 
-$ ansible -i inventory  all -m setup
+$ ansible -i inventory all -e ansible_user=centos -e ansible_password=DevOps321 -m setup
