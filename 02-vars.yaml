@@ -1,12 +1,12 @@
 - name : Demo on using variables
   hosts: all
-  vars:
-    URL: play.google.com                   # Global variable; ALL tasks can inherit this value 
   vars_files: demo-vars.yaml
   vars_prompt:
        - name: PURL
        prompt: Enter the PURL
        private: false
+  vars:
+    URL: play.google.com                   # Global variable; ALL tasks can inherit this value 
   tasks:
        - name: Printing the URL task
          ansible.builtin.debug:
