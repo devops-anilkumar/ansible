@@ -10,5 +10,12 @@
      ansible.builtin.debug:
       msg: "{{OUT.stdout}}"
 
+   - name: printing the exit code of the UPTIME command
+     ansible.builtin.set_fact:
+      STATUS_CODE: "{{OUT.rc}}"
+
+   - name: printing uptime exit code
+     ansible.builtin.debug:
+      msg: "{{OUT.rc}}"
 
 #shell module by default dont show you the output ;it just excutes and if you just want to see the output you just need to register the output
