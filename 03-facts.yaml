@@ -8,3 +8,8 @@
    - name: this is a predefined variable gathered by a fact 
      ansible.builtin.debug:
        msg: Distribution of this machine is {{ansible_distribution}}
+
+       
+   - name: printing the mac address of the remote node 
+     ansible.builtin.debug:
+       msg: Mac address of this machine is {{ansible_default_ipv4.}}
