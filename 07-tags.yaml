@@ -4,16 +4,26 @@
     - name: this is a frontend task
       ansible.builtin.debug:
         msg: installing frontend
+      tags: frontend
   
     - name: this is a mongodb task
       ansible.builtin.debug:
         msg: installing mongodb
+      tags: backend
 
     - name: this is a user task
       ansible.builtin.debug:
         msg: installing user
+      tags: backend
        
     - name: this is a cart task
       ansible.builtin.debug:
         msg: installing cart
+      tags: db
+
+    - name: this is a redis task
+      ansible.builtin.debug:
+        msg: installing redis
+      tags: db
+      
       
