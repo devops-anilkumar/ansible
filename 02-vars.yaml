@@ -4,7 +4,7 @@
     URL: play.google.com                   # Global variable; ALL tasks can inherit this value 
   vars_files: demo-vars.yaml
   vars_prompt:
-       -name: url
+       - name: url
        prompt: Enter the PURL
   tasks:
        - name: Printing the URL task
