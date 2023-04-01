@@ -1,4 +1,4 @@
 #when to use shell module; whenever you want to excute or do some thing where the appropriate module is not avaliable then only prefer using shell 
 
    - name: Demo on using shell module
-       ansible.builtin.shell: uptime
+     ansible.builtin.shell: uptime
