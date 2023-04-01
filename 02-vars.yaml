@@ -1,11 +1,12 @@
 - name : Demo on using variables
   hosts: all
   vars:
-    URL: play.google.com
+    URL: play.google.com                   # Global variable; ALL tasks can inherit this value 
   tasks:
-    - name: Printing the URL task
+    - name: Printing the URL from the task
       ansible.builtin.debug:
         msg: the value of URL is {{URL}}
+    vars: task.google.com                   #task level variable ;the scope of it is only this task
 
 
 # $URL is bash is eqivalent to {{URL}} in YAML
