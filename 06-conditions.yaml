@@ -1,7 +1,7 @@
 - name: Demo on conditions
   hosts: all
   vars:
-    action: true
+    action: false
   tasks:
     - name: execute this task when distribution is CentOS
       ansible.builtin.debug:
