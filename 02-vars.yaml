@@ -6,7 +6,7 @@
     - name: Printing the URL from the task
       ansible.builtin.debug:
         msg: the value of URL is {{URL}}
-    vars: task.google.com                   #task level variable ;the scope of it is only this task
+      vars: task.google.com                   # task level variable ;the scope of it is only this task
 
 
 # $URL is bash is eqivalent to {{URL}} in YAML
