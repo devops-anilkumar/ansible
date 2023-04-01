@@ -3,7 +3,7 @@
   tasks:
     - name: demo on using loops
       ansible.builtin.debug:
-        msg: value is "{{item}}"
+        msg: "value is {{item}}"
       loop:
         - 10
         - 20
