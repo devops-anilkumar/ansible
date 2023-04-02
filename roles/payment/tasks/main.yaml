@@ -4,6 +4,15 @@
       - python36 
       - gcc 
       - python3-devel
-      
-      
     state: present
+
+#calling create-user task from common role
+- name: calling create user role from common
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: create-user 
+
+- name: calling download and extract role from common
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: download   

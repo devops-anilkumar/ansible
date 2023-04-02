@@ -16,7 +16,7 @@
   ansible.builtin.include_role:
     name: common
     tasks_from: download
-
+    
 # call config service role
 - name: calling config service role from common
   ansible.builtin.include_role:
