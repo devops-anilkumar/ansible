@@ -13,3 +13,25 @@
     path: /etc/mongod.conf
     regexp: '127.0.0.1'
     replace: '0.0.0.0'
+
+- name: starting mongodb
+  ansible.builtin.service:
+    name: mongodb
+    state: restarted
+    enabled: yes
+    
+- name: download and extract mongodb schema
+  ansible.builtin.unarchive:
+    src: https://github.com/stans-robot-project/mongodb/archive/main.zip
+    dest: /tmp
+    remote_src: yes
+
+- name: loading users schema
+  community.mongodb.mongodb_shell:
+    file: "/tmp/mongodb-main/users.js"
+    idempotent: yes
+
+- name: loading catalogue schema
+  community.mongodb.mongodb_shell:
+    file: "/tmp/mongodb-main/catalogue.js"
+    idempotent: yes
