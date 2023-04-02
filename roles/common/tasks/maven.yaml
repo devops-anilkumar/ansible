@@ -1,4 +1,4 @@
-- name: Install maven
+- name: Installing maven
   ansible.builtin.package:
     name: maven
     state: present
