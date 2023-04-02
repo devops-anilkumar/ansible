@@ -26,7 +26,7 @@
     dest: /tmp
     remote_src: yes
 
-- name: loading users schema
+- name: loading items schema
   community.mongodb.mongodb_shell:
     file: "/tmp/mongodb-main/{{item}}.js"
     idempotent: yes
