@@ -6,7 +6,7 @@
     name: nodejs
     state: present
 
-#calling user task from common role
+#calling create-user task from common role
 - name: calling create user role from common
   ansible.builtin.include_role:
     name: common
