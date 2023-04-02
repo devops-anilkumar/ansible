@@ -10,5 +10,4 @@
   ansible.builtin.user:
     name: roboshop
     comment: roboshop user account
-    # uid: 1040
-    # group: admin
+  
