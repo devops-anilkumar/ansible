@@ -2,7 +2,7 @@
   ansible.builtin.shell: curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash -
 
 - name: Install nodejs
-  ansible.builtin.yum:
+  ansible.builtin.package:
     name: nodejs
     state: present
 
@@ -30,7 +30,11 @@
     group: "{{APPUSER}}"
     remote_src: yes   
 
-- name: copying component proxy config
+- name: Generating the node modules
+  community.general.npm:
+    path: /home/{{APPUSER}}/{{COMPONENT}}/
+
+- name: copying component systemd file
   ansible.builtin.copy:
     src: systemd.service
     dest: /etc/systemd/system/catalogue.service
