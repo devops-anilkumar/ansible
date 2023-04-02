@@ -1,0 +1,9 @@
+- name: Installing python and dependencies
+  ansible.builtin.yum:
+    name:
+      - python36 
+      - gcc 
+      - python3-devel
+      
+      
+    state: present
