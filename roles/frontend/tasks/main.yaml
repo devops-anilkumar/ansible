@@ -18,6 +18,6 @@
   ansible.builtin.copy:
     src: /tmp/frontend-main/static/
     dest: /usr/share/nginx/html
-  remote_src: yes               # this ensure your source to copy is on the remote machine
+    remote_src: yes               # this ensure your source to copy is on the remote machine
 
   
