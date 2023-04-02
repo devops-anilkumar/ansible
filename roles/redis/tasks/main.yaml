@@ -5,7 +5,7 @@
 
 - name: Install redis
   ansible.builtin.package:
-    name: redis-6.2.11 -y
+    name: redis-6.2.11 
     state: present 
 
 - name: updating redis visibility
