@@ -17,7 +17,7 @@
 - name: starting mongodb
   ansible.builtin.service:
     name: mongod
-    state: restarted
+    state: started
     enabled: yes
     
 - name: download and extract mongodb schema
