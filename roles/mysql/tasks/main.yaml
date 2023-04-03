@@ -41,7 +41,7 @@
   ansible.builtin.shell: echo "uninstall plugin validate_password;" | mysql -uroot -pRoboShop@1
   ignore_errors: yes
 
-  - name: download the schema
+- name: download the schema
   ansible.builtin.include_role:
     name: common
     tasks_from: download
