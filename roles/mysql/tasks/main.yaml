@@ -13,3 +13,15 @@
     name: mysqld
     state: started
     enabled: yes
+
+- name: loading the file from the remote node
+  ansible.builtin.slurp:
+    src: /var/log/mysqld.log
+  register: mysql_log
+
+- name: Print returned information
+  ansible.builtin.debug:
+    msg: "{{ mounts['mysql_log'] | b64decode }}"
+# - name: declearing the facts
+#   ansible.builtin.set_facts:  
+#     DEFAULT_PASSWORD: "{{}}"
