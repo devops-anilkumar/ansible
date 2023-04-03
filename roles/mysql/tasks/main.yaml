@@ -6,8 +6,8 @@
 - name: Install mysql
   ansible.builtin.yum:
     name: 
-      - mysql-community-server
-      - mysql-python
+     - mysql-community-server
+     - mysql-python
     state: present
 
 - name: starting mysql
