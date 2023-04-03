@@ -63,3 +63,9 @@ Ansible uses a module called as setup using that we can check the collected fact
 
 
 $ ansible -i inventory all -e ansible_user=centos -e ansible_password=DevOps321 -m setup
+
+
+###  block and rescue :
+
+block is nothing but a group of tasks:
+rescue will only be excuted if any of the tasks in the block of tasks fails
