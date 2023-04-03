@@ -33,7 +33,7 @@
 - name: Installing application dependencies
   ansible.builtin.pip:
     name: /home/{{APPUSER}}/{{COMPONENT}}/requirements.txt
-    executable: pip3.3
+    executable: pip3
 
 # call config service role
 - name: calling config service role from common
