@@ -8,6 +8,7 @@
   ansible.builtin.file:
     path: /home/{{APPUSER}}/catalogue/
     state: absent
+    ignore_errors: yes
 
 - name: Copying files to roboshop home directory
   ansible.builtin.copy:
