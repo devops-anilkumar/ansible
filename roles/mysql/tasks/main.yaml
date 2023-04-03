@@ -36,6 +36,33 @@
 
     - name: changing mysql password
       ansible.builtin.shell: echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'RoboShop@1';" | mysql --connect-expired-password -uroot -p"{{DEFAULT_PASSWORD}}"
+
+- name: removing the password validate plugin
+  ansible.builtin.shell: echo "uninstall plugin validate_password;" | mysql -uroot -pRoboShop@1
+  ignore_errors: yes
+
+  - name: download the schema
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: download
+
+- name: injecting the schema
+  community.mysql.mysql_db:
+    state: import
+    name: all
+    target: /tmp/mysql-main/shipping.sql
+    login_user: root
+    login_password: RoboShop@1
+
+
+
+
+
+
+
+
+
+
 # if any of the task fails in the block(group of tasks) , then only rescue task should run.
 
 # - name: Print returned information
