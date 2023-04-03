@@ -21,7 +21,7 @@
 
 - name: Print returned information
   ansible.builtin.debug:
-    msg: "{{ mysql_log['content'] | b64decode | regex_findall('.*temporary password.*')}}"
+    msg: "{{ mysql_log['content'] | b64decode | regex_findall('.*temporary password.*') | split(' ')}}"
 # - name: declearing the facts
 #   ansible.builtin.set_facts:  
 #     DEFAULT_PASSWORD: "{{}}"
