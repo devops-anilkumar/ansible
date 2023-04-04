@@ -16,33 +16,20 @@
     state: started
     enabled: yes
 
-- name: Check the default password 
-  block: 
+
+- name: checking the default password
+  block:
     - name: Get MySQL version with non-default credentials
       community.mysql.mysql_info:
-        login_user: root 
+        login_user: root
         login_password: RoboShop@1
         filter: version
 
-  rescue: 
-    - name: Loading the file from the remote node
+  rescue:
+    - name: loading the file from the remote node
       ansible.builtin.slurp:
         src: /var/log/mysqld.log
-      register: mysql_log     
-
-# - name: checking the default password
-#   block:
-#     - name: Get MySQL version with non-default credentials
-#       community.mysql.mysql_info:
-#         login_user: root
-#         login_password: RoboShop@1
-#         filter: version
-
-#   rescue:
-#     - name: loading the file from the remote node
-#       ansible.builtin.slurp:
-#         src: /var/log/mysqld.log
-#         register: mysql_log
+      register: mysql_log
 
     - name: Fetching the password and assigning it to a variable
       ansible.builtin.set_fact:  
