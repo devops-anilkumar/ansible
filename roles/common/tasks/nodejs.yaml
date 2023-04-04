@@ -16,6 +16,11 @@
   ansible.builtin.include_role:
     name: common
     tasks_from: download
+
+# performing NPM install
+- name: doing npm install
+  community.general.npm:
+    path: /home/{{APPUSER}}/{{COMPONENT}}
     
 # call config service role
 - name: calling config service role from common
