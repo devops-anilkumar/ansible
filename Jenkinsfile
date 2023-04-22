@@ -5,6 +5,12 @@ pipeline{
            SSH_CREDENTIALS = credentials('SSH_CRED')
         }
     stages{
+        stage ('testing the tags'){
+            when { expression { TAG_NAME == ".*" } }
+            steps{
+                sh "env"
+            }
+        }
         stage ('performing lint checks'){
             when { branch pattern: "feature-.*", comparator: "REGEXP"}
             steps{
