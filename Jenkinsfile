@@ -8,7 +8,7 @@ pipeline{
         stage ('testing the tags'){
             when { expression { env.TAG_NAME == ".*" } }
             steps{
-                sh "env"
+              sh "env"
             }
         }
         stage ('performing lint checks'){
