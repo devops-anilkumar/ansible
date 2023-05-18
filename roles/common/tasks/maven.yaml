@@ -19,10 +19,10 @@
     name: common
     tasks_from: download-from-nexus
 
-- name: generating artifacts
-  ansible.builtin.shell: mvn clean package && mv target/{{COMPONENT}}-1.0.jar {{COMPONENT}}.jar
-  args:
-    chdir: /home/{{APPUSER}}//{{COMPONENT}}/
+# - name: generating artifacts
+#   ansible.builtin.shell: mvn clean package && mv target/{{COMPONENT}}-1.0.jar {{COMPONENT}}.jar
+#   args:
+#     chdir: /home/{{APPUSER}}//{{COMPONENT}}/
 
   # call config service role
 - name: calling config service role from common
