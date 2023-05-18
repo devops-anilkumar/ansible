@@ -1,24 +1,24 @@
 - name: performing clean up of old version
   ansible.builtin.file:
-    path: /home/{{APP_USER}}/{{COMPONENT}}/
+    path: /home/{{APPUSER}}/{{COMPONENT}}/
     state: absent
   ignore_errors: yes 
 
 - name: creating the component directory
   ansible.builtin.file:
-    path: /home/{{APP_USER}}/{{COMPONENT}}/
+    path: /home/{{APPUSER}}/{{COMPONENT}}/
     state: directory
     mode: '0755'
-  become_user: "{{APP_USER}}"
+  become_user: "{{APPUSER}}"
 
 
 
 - name: download and extract from nexus
   ansible.builtin.unarchive:
     src: http://3.218.141.3:8081/repository/{{COMPONENT}}/{{COMPONENT}}-{{APP_VERSION}}.zip
-    dest: /home/{{APP_USER}}/{{COMPONENT}}/
+    dest: /home/{{APPUSER}}/{{COMPONENT}}/
     remote_src: yes
-  become_user: "{{APP_USER}}"
+  become_user: "{{APPUSER}}"
 
 
 
