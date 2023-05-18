@@ -21,17 +21,12 @@
 #     dest: /usr/share/nginx/html
 #     remote_src: yes               # this ensure your source to copy is on the remote machine
 
-# - name: download and extract from nexus
-#   ansible.builtin.unarchive:
-#     src: http://3.218.141.3:8081/repository/${{COMPONENT}}/${{COMPONENT}}-${{APP_VERSION}}.zip
-#     dest: /usr/share/nginx/html
-#     remote_src: yes
-
-- name: Download and extract from Nexus  
+- name: download and extract from nexus
   ansible.builtin.unarchive:
-    src: http://3.218.141.3:8081/repository/{{COMPONENT}}/{{COMPONENT}}-{{APP_VERSION}}.zip
+    src: http://3.218.141.3:8081/repository/{{COMPONENT}}/{{COMPONENT}}-${{APP_VERSION}}.zip
     dest: /usr/share/nginx/html
     remote_src: yes
+
 
 - name: copying roboshop proxy config
   ansible.builtin.template:
