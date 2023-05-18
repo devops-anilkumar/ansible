@@ -74,3 +74,7 @@ rescue will only be excuted if any of the tasks in the block of tasks fails
 ......
 ansible-playbook robot-dryrun.yaml -e COMPONENT=mongodb -e ansible_user=centos -e ansible_password=DevOps321 -e ENV=qa
 .....
+
+ANSIBLE PULL COMMAND
+
+ansible-pull -U https://github.com/devops-anilkumar/ansible.git robot-pull.yml -e ENV=dev -e COMPONENT=mongodb -e APP_VERSION=

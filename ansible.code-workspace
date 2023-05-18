@@ -1,0 +1,82 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../bash-scripting"
+		},
+		{
+			"path": "../cart"
+		},
+		{
+			"path": "../catalogue"
+		},
+		{
+			"path": "../frontend"
+		},
+		{
+			"path": "../git"
+		},
+		{
+			"path": "../jenkins"
+		},
+		{
+			"path": "../jenkins-shared-library-robot"
+		},
+		{
+			"path": "../mongodb"
+		},
+		{
+			"path": "../mysql"
+		},
+		{
+			"path": "../payment"
+		},
+		{
+			"path": "../rabbitmq"
+		},
+		{
+			"path": "../redis"
+		},
+		{
+			"path": "../shell-scripting"
+		},
+		{
+			"path": "../shipping"
+		},
+		{
+			"path": "../terraform-basics"
+		},
+		{
+			"path": "../terraform-databases"
+		},
+		{
+			"path": "../terraform-loadbalancers"
+		},
+		{
+			"path": "../terraform-vpc"
+		},
+		{
+			"path": "../tf-module-alb"
+		},
+		{
+			"path": "../tf-module-mongodb"
+		},
+		{
+			"path": "../tf-module-mutable-app"
+		},
+		{
+			"path": "../tf-module-mysql"
+		},
+		{
+			"path": "../tf-module-redis"
+		},
+		{
+			"path": "../tf-module-vpc"
+		},
+		{
+			"path": "../user"
+		}
+	]
+}
