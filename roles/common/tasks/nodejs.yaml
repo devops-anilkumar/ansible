@@ -12,10 +12,16 @@
     name: common
     tasks_from: create-user
 
+# # as per the standard application arti fact should be downloaded from the nexus
+# - name: calling download and extract role from common
+#   ansible.builtin.include_role:
+#     name: common
+#     tasks_from: download
+
 - name: calling download and extract role from common
   ansible.builtin.include_role:
     name: common
-    tasks_from: download
+    tasks_from: download-from-nexus
 
 # performing NPM install
 - name: doing npm install
