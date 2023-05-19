@@ -77,4 +77,4 @@ ansible-playbook robot-dryrun.yaml -e COMPONENT=mongodb -e ansible_user=centos -
 
 ANSIBLE PULL COMMAND
 
-ansible-pull -U https://github.com/devops-anilkumar/ansible.git robot-pull.yml -e ENV=dev -e COMPONENT=mongodb -e APP_VERSION=
+ansible-pull -U https://github.com/devops-anilkumar/ansible.git robot-pull.yaml -e ENV=dev -e COMPONENT=frontend -e APP_VERSION=
