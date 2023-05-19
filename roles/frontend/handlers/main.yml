@@ -1,5 +1,12 @@
-- name: Restart nginx
+# - name: Restart nginx
+#   ansible.builtin.service:
+#     name: nginx
+#     state: restarted
+#     enabled: yes
+
+# You can add n number of handlers and each and every handler should have a unique name
+- name: Restart Nginx 
   ansible.builtin.service:
     name: nginx
-    state: restarted
+    state: restarted         
     enabled: yes
