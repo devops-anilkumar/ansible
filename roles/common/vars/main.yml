@@ -1,2 +1,2 @@
-NEXUS_URL: 3.218.151.153
+NEXUS_URL: 3.216.23.102
 SECRETS: "{{ lookup('amazon.aws.aws_secret', 'roboshop/secrets', region='us-east-1') }}"
