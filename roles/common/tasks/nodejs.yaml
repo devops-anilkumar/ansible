@@ -12,6 +12,14 @@
     name: common
     tasks_from: create-user
 
+- name: Downloading the pem key
+  ansible.builtin.get_url:
+    url: https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
+    dest: /home/roboshop
+    mode: '0440'
+    owner: roboshop
+    group: roboshop
+
 # # as per the standard application arti fact should be downloaded from the nexus
 # - name: calling download and extract role from common
 #   ansible.builtin.include_role:
