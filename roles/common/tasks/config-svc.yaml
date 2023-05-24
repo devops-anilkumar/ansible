@@ -1,12 +1,3 @@
-- name: Installing python and dependencies
-  ansible.builtin.yum:
-    name:
-      - botocore
-      - boto3
-    state: present
-
-
-
 - name: copying component systemd file
   ansible.builtin.template:
     src: systemd.service
