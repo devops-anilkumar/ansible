@@ -9,7 +9,7 @@
 - name: Installing boto3 and botocore
   ansible.builtin.yum:
     name:
-      - pip3.6
+      - pip3.6 install boto3
     state: present
 
 #calling create-user task from common role
