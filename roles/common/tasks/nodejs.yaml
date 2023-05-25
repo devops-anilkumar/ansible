@@ -6,11 +6,11 @@
     name: nodejs
     state: present
 
-- name: Installing boto3 and botocore
-  ansible.builtin.yum:
-    name:
-      - pip3.6 install boto3
-    state: present
+- name: Install bottle for Python 3.6 
+  ansible.builtin.pip:
+    name: bottle
+    executable: pip3.6
+
 
 #calling create-user task from common role
 - name: calling create user role from common
