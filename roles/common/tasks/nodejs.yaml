@@ -6,6 +6,12 @@
     name: nodejs
     state: present
 
+- name: Installing python and dependencies
+  ansible.builtin.yum:
+    name:
+      - pip3.6
+    state: present
+
 #calling create-user task from common role
 - name: calling create user role from common
   ansible.builtin.include_role:
